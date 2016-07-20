@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "My Love Affair with Pry"
-date:   2016-07-20 17:20:23 +0000
+date:   2016-07-20 13:20:24 -0400
 ---
 
 
