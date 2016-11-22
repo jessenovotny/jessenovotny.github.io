@@ -13,6 +13,8 @@ The link can be found here: https://youtu.be/ieoxzX-VPL4
 
 Here are the steps I took:
 
+** This blog has removed formatting that improves readability of the following code snippets. You may prefer to follow along with the readme on GitHub https://github.com/jessenovotny/angular-devise-demo **
+
 Run `$ rails new YOUR-APP` in Terminal to get started...
 
 Add the following to your `Gemfile`:
