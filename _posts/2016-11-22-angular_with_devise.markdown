@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Angular with Devise"
-date:   2016-11-22 00:20:15 +0000
+date:   2016-11-21 19:20:16 -0500
 ---
 
 
@@ -13,38 +13,46 @@ The link can be found here: https://youtu.be/ieoxzX-VPL4
 
 Here are the steps I took:
 
-`$ rails new YOUR-APP`
+Run `$ rails new YOUR-APP` in Terminal to get started...
 
 Add the following to your `Gemfile`:
-`gem 'bower-rails'`
-`gem 'devise'`
-`gem 'angular-rails-templates'`
-`gem 'active-model-serializer'`
-`gem 'bootstrap-sass', '~> 3.3.6'`
+```
+gem 'bower-rails'
+gem 'devise'
+gem 'angular-rails-templates'
+gem 'active-model-serializer'
+gem 'bootstrap-sass', '~> 3.3.6'
 * remove turbolinks gem
+```
 
-`$ rake db:create`
-`$ rails g bower_rails:initialize json`
-`$ rails g devise:install`
-`$ rails g migration AddUsernametoUsers username:string:uniq`
-`$ rake db:migrate`
+In Terminal run:
+```
+$ rake db:create
+$ rails g bower_rails:initialize json
+$ rails g devise:install
+$ rails g migration AddUsernametoUsers username:string:uniq
+$ rake db:migrate
+```
 
 Add the following vendor dependencies to `bower.json`:
-`"angular": "v1.5.8"`
-`"angular-ui-router": "latest"`
-`"angular-devise": "latest"`
+```
+"angular": "v1.5.8"
+"angular-ui-router": "latest"
+"angular-devise": "latest"
+```
 
-`$ bundle install`
-`$ rake bower:install`
-`$ rails g serializer user`
-Then add `:username` to `user_serializer.rb`
+Then a few more commands in Terminal:
+```
+$ bundle install
+$ rake bower:install
+$ rails g serializer user
+```
 
-#config/routes.rb
-add `root 'application#index'`
+Add `:username` to `app/serializers/user_serializer.rb`
 
-Create `app/views/application/index.html.erb`
-Copy contents from `views/layouts/application.html.erb` to `index.html.erb`, then delete `application.html.erb`
-replace `<%= yield %>` with `<ui-view></ui-view>`
+In `config/routes.rb` add `root 'application#index'`
+
+Move `views/layouts/application.html.erb` to `app/views/application/`, rename it to `index.html.erb`, and replace `<%= yield %>` with `<ui-view></ui-view>`.
 
 Add the following in `config/application.rb` directly under `class Application < Rails::Application`:
 ```
