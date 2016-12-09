@@ -1,12 +1,12 @@
 # Site settings
-title: Offgridly
+title: Jesse Novotny
 header-img: img/home-bg.png
 email: jessenovotny@gmail.com
 copyright_name: jessenovotny
 description: > # this means to ignore newlines until "baseurl:"
-  Sustainability within reach!
+  Thrilled to Build
 baseurl: "" # the subpath of your site, e.g. /blog
-twitter_username: 
+twitter_username: jeminovo
 github_username:  jessenovotny
 learn_profile: jessenovotny
 email_username: jessenovotny@gmail.com
