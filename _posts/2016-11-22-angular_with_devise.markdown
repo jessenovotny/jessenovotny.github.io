@@ -20,10 +20,6 @@ https://github.com/jessenovotny/angular-devise-demo
 Feel free to read along with the video I created as well:
 https://youtu.be/ieoxzX-VPL4
 
-Here are the steps I took:
-
-** This blog has removed formatting that improves readability of the following code snippets. You may prefer to follow along with the readme on GitHub https://github.com/jessenovotny/angular-devise-demo **
-
 To get started, you want to open Terminal and navigate to the folder where you want to create your new application. In this demonstration, I am on the Desktop.
 
 In Terminal, you will run `$ rails new YOUR-APP` which initializes Rails, creates a directory with the entire framework, and bundles all of the baked in gems. In case you’re unfamiliar, `$` denotes a Terminal command.
