@@ -29,8 +29,8 @@ Open your Gemfile, remove `gem ‘turbolinks’` (because it causes problems wit
 ```
 gem ‘bower-rails’
 gem ‘devise’
-gem ‘angular-rails-templates’ #=> allows us to place our html views in the assets/javascript directory
-gem ‘active-model-serializer’
+gem ‘angular-rails-templates’ #=> allows us to place our html views in the assets/javascripts directory
+gem ‘active-model-serializers’
 gem ‘bootstrap-sass’, ‘~> 3.3.6’ #=> bootstrap also requires the ‘sass-rails’ gem, which should already be included in your gemfile
 ``` 
 
@@ -45,7 +45,7 @@ $ bundle install
 $ rake db:create #=> create database
 $ rails g bower_rails:initialize json #=> generates bower.json file for adding “dependencies”
 $ rails g devise:install #=> generates config/initializers/devise.rb, user resources, user model, and user migration with a TON of default configurations for authentication 
-$ rails g migration AddUsernametoUsers username:string:uniq #=> generates, well, exactly what it says.
+$ rails g migration AddUsernameToUsers username:string:uniq #=> generates, well, exactly what it says.
 $ rake db:migrate
 ```
 
@@ -63,7 +63,7 @@ By the time you’ve got momentum building out your app, you’ll likely have ma
 }
 ```
 
-Once you’ve saved those changes in `bower.json`, you’ll want to install those packages with the following command and then generate your user serializer from the `‘active-model-serializer’ gem` installed earlier:
+Once you’ve saved those changes in `bower.json`, you’ll want to install those packages with the following command and then generate your user serializer from the `‘active-model-serializers’ gem` installed earlier:
 
 ```
 $ rake bower:install
@@ -133,7 +133,7 @@ By default, Rails will initialize with `views/layouts/application.html.erb` but 
 
 The final step to getting our back-end configured is laying out our asset pipeline. Bower has already installed a bunch of stuff for us in `vendor/assets/bower_components` and likewise, we installed a bunch of sweet gems earlier. Let’s make sure our app can find these scripts and stylesheets:
 
-Require the following in `app/assets/javascript/application.js`:
+Require the following in `app/assets/javascripts/application.js`:
 
 ```
 //= require jquery
@@ -160,19 +160,19 @@ Finally, we must rename `app/assets/stylesheets/application.css` to `application
 
 Boom!! Now we have everything setup and we can start working on our front-end.
 
-Here’s a preview of what our angular application tree will look like. Since we installed the `‘angular-rails-templates’ gem`, we can keep all of our html files in the `assets/javascript` directory with all of our other angular files.
+Here’s a preview of what our angular application tree will look like. Since we installed the `‘angular-rails-templates’ gem`, we can keep all of our html files in the `assets/javascripts` directory with all of our other angular files.
 
 ```
-/javascript/controllers/AuthCtrl.js
-/javascript/controllers/HomeCtrl.js
-/javascript/controllers/NavCtrl.js
-/javascript/directives/NavDirective.js
-/javascript/views/home.html
-/javascript/views/login.html
-/javascript/views/register.html
-/javascript/views/nav.html
-/javascript/app.js
-/javascript/routes.js
+/javascripts/controllers/AuthCtrl.js
+/javascripts/controllers/HomeCtrl.js
+/javascripts/controllers/NavCtrl.js
+/javascripts/directives/NavDirective.js
+/javascripts/views/home.html
+/javascripts/views/login.html
+/javascripts/views/register.html
+/javascripts/views/nav.html
+/javascripts/app.js
+/javascripts/routes.js
 ```
 
 First thing’s first, let’s declare our application in `app.js` and inject the necessary dependencies:
