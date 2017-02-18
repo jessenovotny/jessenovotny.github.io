@@ -283,7 +283,7 @@ Since we’ve got all of this nitty gritty behind the scenes information out of 
     </form>
   <br>
   <div class=”panel-footer”>
-    Already signed up? <a ui-sref=”home.login”>Log in here</a>.
+    Already signed up? <a ui-sref=”login”>Log in here</a>.
   </div>
 </div>
 ```
