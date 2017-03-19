@@ -1,11 +1,9 @@
 ---
 layout: post
 title:  "Rock Climber's Guide to Coding"
-date:   2016-08-17 15:08:36 +0000
+date:   2016-08-17 11:08:36 -0400
 ---
 
-
-# Rock Climber's Guide to Coding
 
 Apparently I'm a coder now. A novice maybe, but a coder none the less. I'm still not sure yet if I chose this path or if it chose me. Some force certainly drew me to it. 
 
